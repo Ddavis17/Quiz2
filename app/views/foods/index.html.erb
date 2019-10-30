@@ -1,0 +1,10 @@
+<h1>What is your favorite food??</h1>
+
+<%= simple_form_for @food do |f| %>
+  <%= f.input :name %>
+  <%= f.button :submit %>
+<% end %>
+
+<% Food.all.each do |f| %>
+  <p><%= f.name %></p>
+<% end %>
